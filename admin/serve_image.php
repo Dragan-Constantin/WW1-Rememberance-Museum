@@ -3,7 +3,7 @@
 $imagePath = isset($_GET['path']) ? $_GET['path'] : '';
 
 // Ensure the path is sanitized to avoid directory traversal
-$imagePath = realpath('../WW1-Remberance-Museum/assets/images/' . basename($imagePath));
+$imagePath = realpath('../assets/images/' . basename($imagePath));
 
 // Check if the file exists and is an image
 if ($imagePath && file_exists($imagePath) && exif_imagetype($imagePath)) {
