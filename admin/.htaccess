@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# If the requested resource is not a directory
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+# If the requested resource is not a file
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+# Redirect all other requests to index.php
+RewriteRule ^.*$ ./index.php
